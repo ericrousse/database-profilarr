@@ -1,0 +1,37 @@
+name: 2160p Quality - EN
+description: |
+  Variant of 2160p Quality preferring English audio/subtitles. Uses standard 4K
+  quality scoring.
+
+  This profile matches releases identified as English by filename or audio track.
+tags:
+- 2160p
+- Quality Focused
+- English
+upgradesAllowed: true
+minCustomFormatScore: 20000
+upgradeUntilScore: 888888
+minScoreIncrement: 1
+custom_formats:
+- name: 2160p Quality Tier 1
+  score: 465000
+- name: UHD Bluray
+  score: 420000
+qualities:
+- id: -1
+  name: 2160p Quality
+  description: 4K Quality targets
+  qualities:
+  - id: 1
+    name: 2160p
+upgrade_until:
+  id: -1
+  name: 2160p Quality
+language: must_original
+language_match:
+  mode: require
+  filename_regexes:
+  - Language - English
+  audio_regexes:
+  - Language - English
+  description: "Require English indicators in filename or audio track (regex in regex_patterns)."

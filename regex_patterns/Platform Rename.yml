@@ -1,0 +1,16 @@
+name: Platform Rename
+pattern: \[(?:iT|PLAY|STAN|SHO|NOW|MAX)\b\]|\b(?:iT|PLAY|STAN|SHO|NOW|MAX)\b
+description: Consolidated rename tokens used by multiple streaming platforms (e.g. iT, PLAY, STAN, SHO, NOW, MAX).
+tags:
+- Streaming Service
+- WEB-DL
+tests:
+- expected: true
+  id: 1
+  input: Armour of God 1987 iTunes WEB-DL 4k HEVC HDR AAC-AREY
+- expected: true
+  id: 2
+  input: Dune Prophecy S01E02 Two Wolves 1080p MAX WEB-DL DDP5 1 Atmos H 264-FLUX
+- expected: true
+  id: 3
+  input: Some.Show.S01.1080p.STAN.WEB-DL.x264-Group

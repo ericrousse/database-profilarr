@@ -1,0 +1,36 @@
+name: SD Quality - EN
+description: |
+  Standard-Definition fallback profile preferring English audio/subtitles.
+tags:
+- SD
+- Quality Focused
+- English
+upgradesAllowed: true
+minCustomFormatScore: 1000
+upgradeUntilScore: 888888
+minScoreIncrement: 1
+custom_formats:
+- name: SD Quality Tier 1
+  score: 11000
+- name: DVD
+  score: 20000
+- name: 480p WEB-DL
+  score: 60000
+qualities:
+- id: -2
+  name: SD Quality
+  description: SD fallback
+  qualities:
+  - id: 18
+    name: Bluray-480p
+upgrade_until:
+  id: -2
+  name: SD Quality
+language: must_original
+language_match:
+  mode: require
+  filename_regexes:
+  - Language - English
+  audio_regexes:
+  - Language - English
+  description: "Require English indicators in filename or audio track (regex in regex_patterns)."

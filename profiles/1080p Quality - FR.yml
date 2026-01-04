@@ -1,0 +1,36 @@
+name: 1080p Quality - FR
+description: |
+  Variant of 1080p Quality preferring French audio/subtitles.
+tags:
+- 1080p
+- Quality Focused
+- French
+upgradesAllowed: true
+minCustomFormatScore: 20000
+upgradeUntilScore: 888888
+minScoreIncrement: 1
+custom_formats:
+- name: 1080p Quality Tier 1
+  score: 125000
+- name: 1080p WEB-DL
+  score: 380000
+- name: 1080p Bluray
+  score: 280000
+qualities:
+- id: -1
+  name: 1080p Quality
+  description: 1080p Quality targets
+  qualities:
+  - id: 13
+    name: Bluray-1080p
+upgrade_until:
+  id: -1
+  name: 1080p Quality
+language: must_original
+language_match:
+  mode: require
+  filename_regexes:
+  - Language - French
+  audio_regexes:
+  - Language - French
+  description: "Require French indicators in filename or audio track (regex in regex_patterns)."

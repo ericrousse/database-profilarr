@@ -1,0 +1,20 @@
+name: Language - English
+pattern: (?i)\b(?:english|eng|en|englis[h]?|engsub|vosten|vosten|voen)\b
+description: Detects English language indicators in release filenames or audio/subtitle tags.
+tags: [language, english]
+tests:
+- expected: true
+  id: 1
+  input: "Movie.Title.2020.ENGLISH.1080p.BluRay.mkv"
+- expected: true
+  id: 2
+  input: "Serie.S01E01.ENG.720p.WEBRip.mkv"
+- expected: true
+  id: 3
+  input: "Film.Name.2019.VOSTEN.1080p.x264.mkv"
+- expected: false
+  id: 4
+  input: "Movie.Title.2020.FRENCH.1080p.mkv"
+- expected: false
+  id: 5
+  input: "Some.Title.2021.1080p.BluRay.DD5.1.FRA.mkv"

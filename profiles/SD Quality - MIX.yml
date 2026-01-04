@@ -1,0 +1,40 @@
+name: SD Quality - MIX
+description: |
+  SD mixed language profile. Prefer French when available, otherwise accept
+  English.
+tags:
+- SD
+- Quality Focused
+- Mixed Language
+upgradesAllowed: true
+minCustomFormatScore: 1000
+upgradeUntilScore: 888888
+minScoreIncrement: 1
+custom_formats:
+- name: SD Quality Tier 1
+  score: 11000
+- name: DVD
+  score: 20000
+- name: 480p WEB-DL
+  score: 60000
+qualities:
+- id: -2
+  name: SD Quality
+  description: SD fallback
+  qualities:
+  - id: 18
+    name: Bluray-480p
+upgrade_until:
+  id: -2
+  name: SD Quality
+language: must_original
+language_match:
+  mode: prefer
+  prefer_language: fr
+  filename_regexes:
+  - Language - French
+  - Language - English
+  audio_regexes:
+  - Language - French
+  - Language - English
+  description: "Prefer French indicators, fallback to English."
