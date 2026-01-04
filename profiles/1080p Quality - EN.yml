@@ -1,18 +1,11 @@
-name: 1080p Balanced
-description: '1080p Balanced targets consistent & immutable 1080p **WEB-DLs** using
-  the Streaming Source and Audio Formats to determine the level of Transparency.
-
-
-  - Average Movie Sizes ~ 4 to 8gb per Movie
-
-  - Movie Quality Ranking ~ 6/10
-
-  - Average TV Sizes ~ 2 to 4gb per Episode
-
-  - TV Quality Ranking ~ 7/10'
+name: 1080p Quality - EN
+description: "1080p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
+  \ to target **Transparent** x264 1080p Encodes. \n\n- Average Movie Sizes ~ 10 to\
+  \ 15gb per Movie\n- Movie Quality Ranking ~ 8/10\n- Average TV Sizes ~ 4 to 8gb\
+  \ per Episode\n- TV Quality Ranking ~ 8/10"
 tags:
 - 1080p
-- Balanced Focused
+- Quality Focused
 - Lossy Audio
 - x264
 - h264
@@ -22,6 +15,10 @@ upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 1080p WEB-DL
+  score: 380000
+- name: 1080p Bluray
+  score: 280000
+- name: 1080p WEBRip
   score: 280000
 - name: 720p WEB-DL
   score: 240000
@@ -29,6 +26,18 @@ custom_formats:
   score: 180000
 - name: 720p WEBRip
   score: 180000
+- name: 1080p Quality Tier 1
+  score: 125000
+- name: 1080p Quality Tier 2
+  score: 124000
+- name: 1080p Quality Tier 3
+  score: 123000
+- name: 1080p Quality Tier 4
+  score: 122000
+- name: 1080p Quality Tier 5
+  score: 121000
+- name: 1080p Quality Tier 6
+  score: 120000
 - name: 576p Bluray
   score: 120000
 - name: 720p Quality Tier 1
@@ -183,9 +192,9 @@ custom_formats:
   score: -999999
 custom_formats_radarr:
 - name: 1080p Balanced Tier 1
-  score: 281000
+  score: 101000
 - name: 1080p Balanced Tier 2
-  score: 280000
+  score: 100000
 - name: 720p Balanced Tier 1
   score: 60000
 - name: MA
@@ -219,15 +228,16 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -1
-  name: 1080p Balanced
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  name: 1080p Quality
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
   qualities:
   - id: 10
     name: Bluray-1080p
   - id: 9
     name: WEBDL-1080p
+  - id: 11
+    name: WEBRip-1080p
 - id: -2
   name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
@@ -252,8 +262,7 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: 1080p Balanced
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
-    majority of releases, but there are occasional streaming optimised encodes that
-    should be preferred.
+  name: 1080p Quality
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
 language: must_original
