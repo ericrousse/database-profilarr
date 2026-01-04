@@ -1,28 +1,28 @@
-name: 1080p Balanced - EN
-description: '1080p Balanced targets consistent & immutable 1080p **WEB-DLs** using
-  the Streaming Source and Audio Formats to determine the level of Transparency.
-
-
-  - Average Movie Sizes ~ 4 to 8gb per Movie
-
-  - Movie Quality Ranking ~ 6/10
-
-  - Average TV Sizes ~ 2 to 4gb per Episode
-
-  - TV Quality Ranking ~ 7/10'
+name: 2160p Balanced - FR
+description: "2160p Balanced targets consistent & immutable 2160p **WEB-DLs w/ Lossy\
+  \ Audio**. \n\n- Average Movie Sizes ~ 15 to 30gb per Movie\n- Movie Quality Ranking\
+  \ ~ 8/10\n- Average TV Sizes ~ 5 to 15gb per Episode\n- TV Quality Ranking ~ 8/10"
 tags:
-- 1080p
+- 2160p
 - Balanced Focused
+- HDR
 - Lossy Audio
 - x264
-- h264
-- english
+- h265
 upgradesAllowed: true
 minCustomFormatScore: 20000
 upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
+- name: 2160p WEB-DL
+  score: 440000
+- name: UHD Bluray
+  score: 420000
 - name: 1080p WEB-DL
+  score: 380000
+- name: 1080p Bluray
+  score: 280000
+- name: 1080p WEBRip
   score: 280000
 - name: 720p WEB-DL
   score: 240000
@@ -30,6 +30,18 @@ custom_formats:
   score: 180000
 - name: 720p WEBRip
   score: 180000
+- name: 1080p Quality Tier 1
+  score: 125000
+- name: 1080p Quality Tier 2
+  score: 124000
+- name: 1080p Quality Tier 3
+  score: 123000
+- name: 1080p Quality Tier 4
+  score: 122000
+- name: 1080p Quality Tier 5
+  score: 121000
+- name: 1080p Quality Tier 6
+  score: 120000
 - name: 576p Bluray
   score: 120000
 - name: 720p Quality Tier 1
@@ -72,21 +84,39 @@ custom_formats:
   score: 11000
 - name: SD Quality Tier 2
   score: 10000
+- name: Dolby Vision
+  score: 3000
 - name: AMZN
-  score: 3000
-- name: DSNP
-  score: 3000
+  score: 2000
 - name: ATVP
   score: 2000
-- name: HMAX
+- name: HDR10+
   score: 2000
-- name: MAX
-  score: 2000
-- name: iT
+- name: DTS-X
+  score: 1600
+- name: DTS-HD MA
+  score: 1200
+- name: TrueHD
+  score: 1200
+- name: TrueHD (Missing)
+  score: 1200
+- name: Amazon Enhancement
+  score: 1000
+- name: HDR
+  score: 1000
+- name: HDR (Missing)
+  score: 1000
+- name: HDR10
+  score: 1000
+- name: HLG
   score: 1000
 - name: NF
   score: 1000
+- name: PQ
+  score: 1000
 - name: FLAC
+  score: 800
+- name: PCM
   score: 800
 - name: DTS-HD HRA
   score: 700
@@ -96,7 +126,9 @@ custom_formats:
   score: 600
 - name: DTS-ES
   score: 500
-- name: Dolby Atmos
+- name: Atmos
+  score: 400
+- name: Atmos (Missing)
   score: 400
 - name: Dolby Digital
   score: 400
@@ -120,6 +152,8 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
+- name: BCORE
+  score: 0
 - name: CRAV
   score: 0
 - name: CRIT
@@ -148,29 +182,21 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
+- name: x265 (Bluray)
+  score: -400000
 - name: AV1
   score: -999999
 - name: Banned Groups
   score: -999999
+- name: Banned UHD Bluray
+  score: -999999
 - name: Banned WEBRip
   score: -999999
-- name: BCORE
-  score: -999999
-- name: Dolby Vision
+- name: Dolby Vision (Without Fallback)
   score: -999999
 - name: Full Disc
   score: -999999
 - name: h265
-  score: -999999
-- name: HDR
-  score: -999999
-- name: HDR10
-  score: -999999
-- name: HDR10+
-  score: -999999
-- name: HLG
-  score: -999999
-- name: PQ
   score: -999999
 - name: Remux
   score: -999999
@@ -178,23 +204,45 @@ custom_formats:
   score: -999999
 - name: VVC
   score: -999999
-- name: x265
+- name: x264 (2160p)
+  score: -999999
+- name: x265 (WEB)
   score: -999999
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 2160p Balanced Tier 1
+  score: 442000
+- name: 2160p Balanced Tier 2
+  score: 441000
+- name: 2160p Balanced Tier 3
+  score: 440000
 - name: 1080p Balanced Tier 1
-  score: 281000
+  score: 101000
 - name: 1080p Balanced Tier 2
-  score: 280000
+  score: 100000
 - name: 720p Balanced Tier 1
   score: 60000
 - name: MA
+  score: 6000
+- name: DSNP
   score: 4000
+- name: iT
+  score: 4000
+- name: HMAX
+  score: 2000
+- name: MAX
+  score: 2000
 - name: Better Theatricals
   score: 1000
 - name: Special Edition
   score: 1000
+- name: Disney+ Enhancement
+  score: -1000
+- name: Movies Anywhere Enhancement
+  score: -2000
+- name: iTunes Enhancement
+  score: -3000
 - name: 3D
   score: -999999
 - name: B&W
@@ -210,8 +258,20 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
+- name: 2160p Balanced Tier 1
+  score: 444000
+- name: DSNP
+  score: 3000
+- name: HMAX
+  score: 3000
+- name: MAX
+  score: 3000
+- name: iT
+  score: 1000
 - name: Season Pack
   score: 10
+- name: HBO Max Enhancement
+  score: -1000
 - name: Remux (Source)
   score: -999999
 - name: TV Extras
@@ -220,16 +280,26 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -1
-  name: 1080p Balanced
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
+  name: 2160p Balanced
+  description: Balanced capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
     should be preferred.
+  qualities:
+  - id: 4
+    name: Bluray-2160p
+  - id: 5
+    name: WEBDL-2160p
+- id: -2
+  name: 1080p Quality HDR
+  description: Indistinguishable from source
   qualities:
   - id: 10
     name: Bluray-1080p
   - id: 9
     name: WEBDL-1080p
-- id: -2
+  - id: 11
+    name: WEBRip-1080p
+- id: -3
   name: 720p Quality
   description: Fallback to 720p when 1080p cannot be found.
   qualities:
@@ -239,7 +309,7 @@ qualities:
     name: WEBDL-720p
   - id: 15
     name: WEBRip-720p
-- id: -3
+- id: -4
   name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
@@ -253,8 +323,8 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: 1080p Balanced
-  description: Balanced Capable releases. Typically WEB-DL would be the overwhelming
+  name: 2160p Balanced
+  description: Balanced capable releases. Typically WEB-DL would be the overwhelming
     majority of releases, but there are occasional streaming optimised encodes that
     should be preferred.
-language: must_original
+language: must_french

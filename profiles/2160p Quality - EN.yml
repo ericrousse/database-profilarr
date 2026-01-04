@@ -17,6 +17,7 @@ tags:
 - Lossless Audio
 - x265
 - h265
+- english
 upgradesAllowed: true
 minCustomFormatScore: 20000
 upgradeUntilScore: 888888

@@ -1,22 +1,20 @@
-name: 1080p Quality HDR
-description: "1080p Quality HDR utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
-  \ to target **Transparent x265 HDR** 1080p Encodes. \n\n- Average Movie Sizes ~\
-  \ 10 to 20gb per Movie\n- Movie Quality Ranking ~ 9/10\n- Average TV Sizes ~ 4 to\
-  \ 10gb per Episode\n- TV Quality Ranking ~ 9/10"
+name: 1080p Quality - FR
+description: "1080p Quality utilizes the [**Golden Popcorn Performance Index**](https://dictionarry.dev/wiki/gppi)\
+  \ to target **Transparent** x264 1080p Encodes. \n\n- Average Movie Sizes ~ 10 to\
+  \ 15gb per Movie\n- Movie Quality Ranking ~ 8/10\n- Average TV Sizes ~ 4 to 8gb\
+  \ per Episode\n- TV Quality Ranking ~ 8/10"
 tags:
 - 1080p
 - Quality Focused
-- HDR
 - Lossy Audio
 - x264
-- x265
+- h264
+- french
 upgradesAllowed: true
 minCustomFormatScore: 20000
 upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
-- name: UHD Bluray
-  score: 420000
 - name: 1080p WEB-DL
   score: 380000
 - name: 1080p Bluray
@@ -85,31 +83,17 @@ custom_formats:
   score: 10000
 - name: AMZN
   score: 3000
-- name: Dolby Vision
-  score: 3000
 - name: DSNP
   score: 3000
 - name: ATVP
-  score: 2000
-- name: HDR10+
   score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
   score: 2000
-- name: HDR
-  score: 1000
-- name: HDR (Missing)
-  score: 1000
-- name: HDR10
-  score: 1000
-- name: HLG
-  score: 1000
 - name: iT
   score: 1000
 - name: NF
-  score: 1000
-- name: PQ
   score: 1000
 - name: FLAC
   score: 800
@@ -173,23 +157,29 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
-- name: x265 (Bluray)
-  score: -400000
 - name: AV1
   score: -999999
 - name: Banned Groups
-  score: -999999
-- name: Banned UHD Bluray
   score: -999999
 - name: Banned WEBRip
   score: -999999
 - name: BCORE
   score: -999999
-- name: Dolby Vision (Without Fallback)
+- name: Dolby Vision
   score: -999999
 - name: Full Disc
   score: -999999
 - name: h265
+  score: -999999
+- name: HDR
+  score: -999999
+- name: HDR10
+  score: -999999
+- name: HDR10+
+  score: -999999
+- name: HLG
+  score: -999999
+- name: PQ
   score: -999999
 - name: Remux
   score: -999999
@@ -197,7 +187,7 @@ custom_formats:
   score: -999999
 - name: VVC
   score: -999999
-- name: x265 (WEB)
+- name: x265
   score: -999999
 - name: Xvid
   score: -999999
@@ -239,7 +229,7 @@ custom_formats_sonarr:
   score: -999999
 qualities:
 - id: -1
-  name: 1080p Quality HDR
+  name: 1080p Quality
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
   qualities:
@@ -273,7 +263,7 @@ qualities:
     name: DVD
 upgrade_until:
   id: -1
-  name: 1080p Quality HDR
+  name: 1080p Quality
   description: All capable of being indistinguishable from source. WEB-DL included
     to not allow unknown encode to trump known WEB-DL.
-language: must_original
+language: must_french
