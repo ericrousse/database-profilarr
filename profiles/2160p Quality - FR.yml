@@ -209,12 +209,6 @@ custom_formats:
   score: -400000
 - name: AV1
   score: -999999
-- name: Banned Groups
-  score: -999999
-- name: Banned UHD Bluray
-  score: -999999
-- name: Banned WEBRip
-  score: -999999
 - name: Dolby Vision (Without Fallback)
   score: -999999
 - name: Full Disc
