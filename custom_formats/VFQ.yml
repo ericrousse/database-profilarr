@@ -6,12 +6,7 @@ tags:
 conditions:
 - name: Sonarr - Canadian French
   negate: false
-  required: true
-  type: release_title
   pattern: Canadian French
-- name: Sonarr - Not VF2
-  negate: true
   required: true
   type: release_title
-  pattern: Radarr - VF2
 tests: []
