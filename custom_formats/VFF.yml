@@ -1,0 +1,10 @@
+name: VFF
+description: ''
+tags: []
+conditions:
+- name: VFF
+  type: release_title
+  required: true
+  negate: false
+  pattern: VFF
+tests: []

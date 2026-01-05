@@ -26,6 +26,8 @@ custom_formats:
   score: 0
 - name: Radarr - FR Remux Tier 02
   score: 0
+- name: VFF
+  score: 0
 - name: VFQ
   score: 0
 - name: VOF
